@@ -16,7 +16,7 @@ class ProductSeeder extends Seeder
      */
     public function run()
     {
-        $product_1 = Product::create([
+        $productOverwatch = Product::create([
             'name' => 'Overwatch',
             'description' => 'Мультиплеерный шутер от первого лица с элементами фантастики',
             'slug' => '://example.com/products'.'check_concatenation',
@@ -24,7 +24,7 @@ class ProductSeeder extends Seeder
         ]);
 
 //        $product_1->publisher()->save(Publisher::where('name','=','Blizzard')->first()); //не работает строка
-        $product_1->categories()->saveMany([Category::where('name', '=','Жанр_шутер')->first(),
+        $productOverwatch->categories()->saveMany([Category::where('name', '=','Жанр_шутер')->first(),
                                             Category::where('name', 'Тип_многопользовательская')->first(),
                                             Category::where('name', 'Жанр_фантастика')->first()]);
 
