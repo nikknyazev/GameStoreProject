@@ -10,6 +10,10 @@ class Price extends Model
 {
     use HasFactory;
 
+    public const STANDARD_PRICE = 0;
+    public const SALE_PRICE = 1;
+    public const DISCOUNT_PRICE = 2;
+
     protected $fillable = [
         'product_id',
         'value',

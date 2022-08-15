@@ -35,7 +35,7 @@ class Product extends Model
 
      public function price(): HasMany
      {
-         return $this->hasMany(Product::class);
+         return $this->hasMany(Price::class);
      }
 
      public function publisher(): BelongsTo
